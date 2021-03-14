@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 0.145fr 1fr;
+  grid-template-areas:
+    "head head head head head head head head head head"
+    "body body body body body body body body body body"
+    "foot foot foot foot foot foot foot foot foot foot";
+}
+
+/* ! Log In */
+
+header {
+  grid-area: head;
+  background: linear-gradient(to bottom, #4c67a2, #3b5999);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.log-in {
+  width: 348px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.header-container input {
+  display: block;
+  width: 140px;
+  height: 19px;
+  outline: none;
+  padding: 3px;
+  font-size: 0.7rem;
+  box-shadow: 0 0 1px black;
+  border: none;
+}
+
+.header-container .title {
+  font-size: 0.7rem;
+  color: white;
+}
+
+.password-forgot {
+  text-decoration: none;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.password-forgot:hover {
+  text-decoration: underline;
+}
+
+.child:nth-child(1) {
+  position: relative;
+  top: -9px;
+}
+
+.child:nth-child(1) label {
+  position: relative;
+  top: -3px;
+}
+
+.child:nth-child(1) input {
+  height: 19px;
+}
+
+.child:nth-child(2) {
+  height: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+}
+
+.header-container button {
+  width: 41px;
+  height: 20px;
+  background-color: #4167b2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  font-size: 0.65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 1px black;
+  cursor: pointer;
+}
+
+.header-container button:hover {
+  background-color: #2f5194;
+}
+
+/* ! New Account */
+
+main {
+  grid-area: body;
+  display: flex;
+  justify-content: center;
+  background-color: #ecedf1;
+}
+
+.main-container {
+  width: 370px;
+  height: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.main-container h1 {
+  font-size: 2.19rem;
+}
+
+.main-container span {
+  color: #5b5757;
+  font-size: 1.3rem;
+  margin-top: -5px;
+}
+
+.input-feilds-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.input-feilds-container input {
+  padding: 10px 8px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 1px black;
+}
+
+.birth-date {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.birth-date label {
+  font-weight: bold;
+  color: #5b57578f;
+}
+
+.birth-date .childs {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.birth-date .options {
+  display: flex;
+}
+
+.birth-date .options select {
+  padding: 5px;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 1px black;
+}
+
+.gender {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gender > label {
+  font-weight: bold;
+  color: #5b57578f;
+}
+
+.gender .options {
+  width: 265px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+input[type="radio"] {
+  position: relative;
+  top: -2px;
+}
+
+.agreeing {
+  font-size: 11px;
+  color: #777;
+}
+
+.agreeing p {
+  width: 20rem;
+}
+
+.agreeing a {
+  color: #385898;
+}
+
+.agreeing a:hover {
+  text-decoration: underline;
+}
+
+.sing-up-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to bottom, #67ae55, #578843);
+  box-shadow: inset 0 1px 1px #a4e388;
+  border: 0.5px solid black;
+  width: 184px;
+  padding: 7px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-top: 5px;
+}
+
+.sing-up-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #67ae55 25%, #578843);
+}
+
+::placeholder {
+  font-size: 1.1rem;
+  color: #5b57578f;
+}
